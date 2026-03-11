@@ -1,0 +1,32 @@
+# BVMT AlgoTrader — Dependencies
+# Install: pip install -r requirements.txt
+
+# Core
+numpy>=1.24.0
+pandas>=2.0.0
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0          # Faster BS4 parser
+
+# Data & Storage
+sqlalchemy>=2.0.0    # SQLite/PostgreSQL for trade history
+redis>=5.0.0         # Optional: cache layer for real-time quotes
+
+# Scheduling & Async
+apscheduler>=3.10.0  # Run scan every N minutes during market hours
+aiohttp>=3.9.0       # Async scraping for parallel ticker fetches
+
+# Visualization (CLI)
+rich>=13.0.0         # Pretty terminal output
+
+# Broker APIs (when integrating real brokers)
+# zerodha-kite>=4.0.0  # Replace with BVMT-compatible broker SDK
+# ccxt>=4.0.0          # Crypto fallback for testing
+
+# Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+
+# Optional: notifications
+# twilio>=8.0.0        # SMS alerts for signals
+# python-telegram-bot>=20.0  # Telegram bot alerts
